@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<title>Airfoil Self-Noise Data Set</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Roboto", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://images.unsplash.com/photo-1470086215110-7012d5b9ed60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+
+    .icon-big {
+        font-size: 192px
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><i class="fas fa-paper-plane"></i></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#challenge" class="w3-bar-item w3-button"><i class="fa fa-chalkboard-teacher"></i>
+                    CHALLENGE</a>
+                <a href="#model" class="w3-bar-item w3-button"> <i class="fas fa-hat-wizard"></i> MODEL</a>
+                <a href="#result" class="w3-bar-item w3-button"><i class="fa fa-chart-line"></i> RESULT</a>
+                <a href="#code" class="w3-bar-item w3-button"><i class="fab fa-github"></i> CODE</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#challenge" onclick="w3_close()" class="w3-bar-item w3-button">CHALLENGE</a>
+        <a href="#model" onclick="w3_close()" class="w3-bar-item w3-button">MODEL</a>
+        <a href="#result" onclick="w3_close()" class="w3-bar-item w3-button">RESULT</a>
+        <a href="#code" onclick="w3_close()" class="w3-bar-item w3-button">CODE</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">Airfoil Self-Noise Data Set</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+            <span class="w3-large">Predict the self-generated noise of an airfoil blade encountering smooth flow.</span>
+            <p><a href="#about"
+                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
+                    more and start today</a></p>
+        </div>
+    </header>
+
+
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container" id="about">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Airfoil Self-Noise Data Set</h1>
+                <h5 class="w3-padding-32">The NASA <a href="https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise#"
+                        class="w3-text-blue">data set</a> comprises different size NACA 0012 airfoils at various wind
+                    tunnel speeds and angles of attack. The span of the airfoil and the observer position were the same
+                    in all of the experiments.</h5>
+                <ul class="w3-ul w3-card w3-text-grey">
+                    <li class="w3-text-black">
+                        <h5>Attribute Information:</h5>
+                    </li>
+                    <li>1. Frequency, in Hertz.</li>
+                    <li>2. The angle of attack, in degrees.</li>
+                    <li>3. Chord length, in meters.</li>
+                    <li>4. Free-stream velocity, in meters per second.</li>
+                    <li>5. Suction side displacement thickness, in meters.</li>
+                    <li>6. Scaled sound pressure level, in decibels.</li>
+                </ul>
+            </div>
+
+            <div class="w3-third w3-center w3-hide-small">
+                <i class="fa fa-wind icon-big w3-padding-64 w3-text-gray w3-margin-right w3-hide-medium"></i>
+                <i class="fa fa-wind fa-10x w3-padding-64 w3-text-gray w3-margin-right w3-hide-large"></i>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="challenge">
+        <div class="w3-content">
+            <div class="w3-third w3-center w3-hide-small">
+                <i
+                    class="fa fa-chalkboard-teacher icon-big w3-padding-64 w3-text-gray w3-margin-right w3-hide-medium"></i>
+                <i class="fa fa-chalkboard-teacher fa-10x w3-padding-64 w3-text-gray w3-margin-right w3-hide-large"></i>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Challenge</h1>
+                <h5 class="w3-padding-32">TODO: tell about the data challenges.</h5>
+
+                <p class="w3-text-grey">Examples: Null values, bad data, categorical data, etc.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Third Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container" id="model">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Model</h1>
+                <h5 class="w3-padding-32">TODO: tell about the machine learning model was used.</h5>
+
+                <p class="w3-text-grey">Example: Logistic regression, Decision Tree, etc.</p>
+            </div>
+
+            <div class="w3-third w3-center w3-hide-small">
+                <i class="fas fa-hat-wizard icon-big w3-padding-64 w3-text-gray w3-margin-right w3-hide-medium"></i>
+                <i class="fas fa-hat-wizard fa-10x w3-padding-64 w3-text-gray w3-margin-right w3-hide-large"></i>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="result">
+        <div class="w3-content">
+
+            <div class="w3-third w3-center w3-hide-small">
+                <i class="fa fa-chart-line icon-big w3-padding-64 w3-text-gray w3-margin-right w3-hide-medium"></i>
+                <i class="fa fa-chart-line fa-10x w3-padding-64 w3-text-gray w3-margin-right w3-hide-large"></i>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Result</h1>
+                <h5 class="w3-padding-32">TODO: show the results.</h5>
+
+                <p class="w3-text-grey">Example, predict 70%, bad prediction, etc.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
