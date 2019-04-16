@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Airfoil Self-Noise Data Set</title>
+<title>Airfoil Self-Noise Data Set </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,7 +54,8 @@
                     CHALLENGE</a>
                 <a href="#model" class="w3-bar-item w3-button"> <i class="fas fa-hat-wizard"></i> MODEL</a>
                 <a href="#result" class="w3-bar-item w3-button"><i class="fa fa-chart-line"></i> RESULT</a>
-                <a href="https://github.com/claudinei-daitx/machine-learning-course" class="w3-bar-item w3-button"><i class="fab fa-github"></i> CODE</a>
+                <a href="https://github.com/claudinei-daitx/airfoil-self-noise-prediction"
+                    class="w3-bar-item w3-button"><i class="fab fa-github"></i> CODE</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -74,7 +75,8 @@
         <a href="#challenge" onclick="w3_close()" class="w3-bar-item w3-button">CHALLENGE</a>
         <a href="#model" onclick="w3_close()" class="w3-bar-item w3-button">MODEL</a>
         <a href="#result" onclick="w3_close()" class="w3-bar-item w3-button">RESULT</a>
-        <a href="https://github.com/claudinei-daitx/machine-learning-course" onclick="w3_close()" class="w3-bar-item w3-button">CODE</a>
+        <a href="https://github.com/claudinei-daitx/airfoil-self-noise-prediction" onclick="w3_close()"
+            class="w3-bar-item w3-button">CODE</a>
     </nav>
 
     <!-- Header with full-height image -->
@@ -133,9 +135,10 @@
 
             <div class="w3-twothird">
                 <h1>Challenge</h1>
-                <h5 class="w3-padding-32">TODO: tell about the data challenges.</h5>
+                <p class="w3-text-grey">This dataset is linear or no?</p>
+                <p class="w3-text-grey">What is the best dimensionality reduction? PCA or T-SNE?</p>
+                <p class="w3-text-grey">Are there empty or null values?</p>
 
-                <p class="w3-text-grey">Examples: Null values, bad data, categorical data, etc.</p>
             </div>
         </div>
     </div>
@@ -147,9 +150,18 @@
         <div class="w3-content">
             <div class="w3-twothird">
                 <h1>Model</h1>
-                <h5 class="w3-padding-32">TODO: tell about the machine learning model was used.</h5>
+                <h5 class="w3-padding-32">This dataset was trained with linear models, non-linear models and a neural
+                    network.</h5>
 
-                <p class="w3-text-grey">Example: Logistic regression, Decision Tree, etc.</p>
+                <p class="w3-text-grey">Linear models: Linear regression, Lasso, Ridge, ElasticNet, BayesianRidge</p>
+
+                <p class="w3-text-grey">Non-linear models: SVR </p>
+
+                <p class="w3-text-grey">Neural network: Hidden layers with Tensorflow and Keras </p>
+
+                <a href="https://github.com/claudinei-daitx/airfoil-self-noise-prediction/blob/master/predict_airfoil_self_nose.ipynb"
+                    class="w3-button w3-light-grey"><i class="fab fa-github w3-margin-right"></i> To the code</a>
+
             </div>
 
             <div class="w3-third w3-center w3-hide-small">
@@ -173,9 +185,54 @@
 
             <div class="w3-twothird">
                 <h1>Result</h1>
-                <h5 class="w3-padding-32">TODO: show the results.</h5>
+                <p class="w3-text-grey">See the results for each model:</p>
 
-                <p class="w3-text-grey">Example, predict 70%, bad prediction, etc.</p>
+                <table class="w3-table-all w3-card">
+                    <tr>
+                        <th>Model</th>
+                        <th>R2 score</th>
+                        <th>MSE score</th>
+                    </tr>
+                    <tr>
+                        <td>Neural network</td>
+                        <td>88.92%</td>
+                        <td>5.40</td>
+                    </tr>
+                    <tr>
+                        <td>SVR</td>
+                        <td>79.81%</td>
+                        <td>9.85</td>
+                    </tr>
+                    <tr>
+                        <td>BayesianRidge</td>
+                        <td>45.68%</td>
+                        <td>26.52</td>
+                    </tr>
+                    <tr>
+                        <td>LinearRegression</td>
+                        <td>45.68%</td>
+                        <td>26.53</td>
+                    </tr>
+                    <tr>
+                        <td>Ridge</td>
+                        <td>45.68%</td>
+                        <td>26.52</td>
+                    </tr>
+                    <tr>
+                        <td>ElasticNet</td>
+                        <td>45.55%</td>
+                        <td>26.59</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lasso</td>
+                        <td>45.55%</td>
+                        <td>26.59</td>
+                    </tr>
+                </table>
+
+
+
             </div>
         </div>
     </div>
